@@ -41,6 +41,56 @@ To complete this lab you should develop a requirements model using [reqT](http:/
 
         * What can be connected with a relation?
 
+### Task 0: Answer
+
+<img src="ContextDiagram.jpg" alt="Pedatim Context Diagram" width="600" height="400">
+
+**Features**
+
+* Enable remote administration of Pedatim instances instances for their patients from e.g. hospitals or home care.
+
+* Have a "superadmin" view showing all available instances (all departments, for all customers)
+
+* Give customers ability to remotely view and administer their patients Pedatim rehablitation status.
+
+* Each department should be presented on a dashboard in a logical way.
+
+* The dashboard should be a webb application
+
+* The admin dashboard should be able to: 
+
+    * provide overview of all patients
+    * issue alerts
+    * set up rehabilitation programmes
+    * handle personal data securely (and handle GDPR)
+
+**Stakeholders**
+
+* Hospitals
+
+* Short stay care home
+
+* Homecare
+
+* Patients
+
+* Smile Inject Capital
+
+**What are the differences between an entity and an attribute?**
+
+An entity represents a real-world object or concept. It's something that exists independently and can be uniquely identified.
+An attribute is a property or characteristic of an entity. It describes various aspects of an entity.
+
+**What can be connected with a relation?**
+
+A relation (or relationship) is a connection or link between two or more entities. It defines how entities interact with each other.
+
+Types of Relationships:
+
+* One-to-One: Each instance of one entity relates to a single instance of another entity.
+* One-to-Many: A single instance of one entity is related to multiple instances of another entity.
+* Many-to-Many: Multiple instances of one entity are related to multiple instances of another entity.
+
 ## Task 1: Create a `context` section
 
 * Launch reqT and open the swing desktop gui editor with the `edit` command in terminal.
