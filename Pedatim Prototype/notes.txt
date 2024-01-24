@@ -14,3 +14,9 @@ rote to /Users/filip/Documents/Programming/ETSN15/Pedatim Prototype/pedatim-api/
   "author": "",
   "license": "ISC"
 }
+
+curl -X POST http://localhost:5001/api/patients/add \
+     -H 'Content-Type: application/json' \
+     -d '{"name": "John Doe", "status": "Active"}'
+
+
