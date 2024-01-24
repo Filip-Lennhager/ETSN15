@@ -1,0 +1,16 @@
+Make sure that /usr/local/bin is in your $PATH.
+
+rote to /Users/filip/Documents/Programming/ETSN15/Pedatim Prototype/pedatim-api/package.json:
+
+{
+  "name": "pedatim-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
