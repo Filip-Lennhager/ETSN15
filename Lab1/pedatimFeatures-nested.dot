@@ -5,23 +5,66 @@ digraph "reqT.Model" {
   edge [fontname="Sans", fontsize=9];
 
 
-//subGraphPre(Section(features),has,Feature(adminDashboard),/)
+//subGraphPre(Section(Priorities),has,Feature(patientDataSecurity),/)
+
+  "/Section(Priorities)" [label="Section\nPriorities", shape=box];
+  "/Section(Priorities)" ->   "/Section(Priorities).has/Feature(patientDataSecurity)" [label=has, lhead="cluster_Section(Priorities)"];
+  subgraph "cluster_Section(Priorities)" { 
+
+//singleSubnodeLink(Feature(patientDataSecurity),has,Prio(5),Section(Priorities).has/)
+
+    "/Section(Priorities).has/Feature(patientDataSecurity)" [label="Feature\npatientDataSecurity", shape=box];
+    "/Section(Priorities).has/Feature(patientDataSecurity).has/Prio(5)" [label="Prio\n5", shape=box, style=rounded];
+    "/Section(Priorities).has/Feature(patientDataSecurity)" ->   "/Section(Priorities).has/Feature(patientDataSecurity).has/Prio(5)"[label=has];
+
+//singleSubnodeLink(Feature(editPatientInfo),has,Prio(4),Section(Priorities).has/)
+
+    "/Section(Priorities).has/Feature(editPatientInfo)" [label="Feature\neditPatientInfo", shape=box];
+    "/Section(Priorities).has/Feature(editPatientInfo).has/Prio(4)" [label="Prio\n4", shape=box, style=rounded];
+    "/Section(Priorities).has/Feature(editPatientInfo)" ->   "/Section(Priorities).has/Feature(editPatientInfo).has/Prio(4)"[label=has];
+
+//singleSubnodeLink(Feature(patientOverview),has,Prio(3),Section(Priorities).has/)
+
+    "/Section(Priorities).has/Feature(patientOverview)" [label="Feature\npatientOverview", shape=box];
+    "/Section(Priorities).has/Feature(patientOverview).has/Prio(3)" [label="Prio\n3", shape=box, style=rounded];
+    "/Section(Priorities).has/Feature(patientOverview)" ->   "/Section(Priorities).has/Feature(patientOverview).has/Prio(3)"[label=has];
+
+//singleSubnodeLink(Feature(issueAlert),has,Prio(2),Section(Priorities).has/)
+
+    "/Section(Priorities).has/Feature(issueAlert)" [label="Feature\nissueAlert", shape=box];
+    "/Section(Priorities).has/Feature(issueAlert).has/Prio(2)" [label="Prio\n2", shape=box, style=rounded];
+    "/Section(Priorities).has/Feature(issueAlert)" ->   "/Section(Priorities).has/Feature(issueAlert).has/Prio(2)"[label=has];
+
+//singleSubnodeLink(Feature(superAdminDashboard),has,Prio(1),Section(Priorities).has/)
+
+    "/Section(Priorities).has/Feature(superAdminDashboard)" [label="Feature\nsuperAdminDashboard", shape=box];
+    "/Section(Priorities).has/Feature(superAdminDashboard).has/Prio(1)" [label="Prio\n1", shape=box, style=rounded];
+    "/Section(Priorities).has/Feature(superAdminDashboard)" ->   "/Section(Priorities).has/Feature(superAdminDashboard).has/Prio(1)"[label=has];
+  }
+
+//subGraphPre(Section(features),has,Feature(editPatientInfo),/)
 
   "/Section(features)" [label="Section\nfeatures", shape=box];
-  "/Section(features)" ->   "/Section(features).has/Feature(adminDashboard)" [label=has, lhead="cluster_Section(features)"];
+  "/Section(features)" ->   "/Section(features).has/Feature(editPatientInfo)" [label=has, lhead="cluster_Section(features)"];
   subgraph "cluster_Section(features)" { 
 
-//singleSubnodeLink(Feature(adminDashboard),has,Gist(Enable remote administration of Pedatim instances for each department.),Section(features).has/)
+//singleSubnodeLink(Feature(editPatientInfo),has,Gist(Enable remote administration of Pedatim instances for healthcare Workers.),Section(features).has/)
 
-    "/Section(features).has/Feature(adminDashboard)" [label="Feature\nadminDashboard", shape=box];
-    "/Section(features).has/Feature(adminDashboard).has/Gist(Enable remote administration of Pedatim instances for each department.)" [label="Gist\nEnable remote administration of Pedatim instances for each department.", shape=box, style=rounded];
-    "/Section(features).has/Feature(adminDashboard)" ->   "/Section(features).has/Feature(adminDashboard).has/Gist(Enable remote administration of Pedatim instances for each department.)"[label=has];
+    "/Section(features).has/Feature(editPatientInfo)" [label="Feature\neditPatientInfo", shape=box];
+    "/Section(features).has/Feature(editPatientInfo).has/Gist(Enable remote administration of Pedatim instances for healthcare Workers.)" [label="Gist\nEnable remote administration of Pedatim instances for healthcare Workers.", shape=box, style=rounded];
+    "/Section(features).has/Feature(editPatientInfo)" ->   "/Section(features).has/Feature(editPatientInfo).has/Gist(Enable remote administration of Pedatim instances for healthcare Workers.)"[label=has];
 
-//singleSubnodeLink(Feature(superAdminDashboard),has,Gist(Enable remote administration and provide overview for each department and all Pedatim avalible instances.),Section(features).has/)
+//singleSubnodeLink(Feature(patientOverview),has,Gist(Provide an overview of patients for each department in a logical way.),Section(features).has/)
+
+    "/Section(features).has/Feature(patientOverview)" [label="Feature\npatientOverview", shape=box];
+    "/Section(features).has/Feature(patientOverview).has/Gist(Provide an overview of patients for each department in a logical way.)" [label="Gist\nProvide an overview of patients for each department in a logical way.", shape=box, style=rounded];
+    "/Section(features).has/Feature(patientOverview)" ->   "/Section(features).has/Feature(patientOverview).has/Gist(Provide an overview of patients for each department in a logical way.)"[label=has];
+
+//singleSubnodeLink(Feature(superAdminDashboard),has,Gist(Enable Phystec AB to administrate healtcare worker accounts.),Section(features).has/)
 
     "/Section(features).has/Feature(superAdminDashboard)" [label="Feature\nsuperAdminDashboard", shape=box];
-    "/Section(features).has/Feature(superAdminDashboard).has/Gist(Enable remote administration and provide overview for each department and all Pedatim avalible instances.)" [label="Gist\nEnable remote administration and provide overview for each department and all Pedatim avalible instances.", shape=box, style=rounded];
-    "/Section(features).has/Feature(superAdminDashboard)" ->   "/Section(features).has/Feature(superAdminDashboard).has/Gist(Enable remote administration and provide overview for each department and all Pedatim avalible instances.)"[label=has];
+    "/Section(features).has/Feature(superAdminDashboard).has/Gist(Enable Phystec AB to administrate healtcare worker accounts.)" [label="Gist\nEnable Phystec AB to administrate healtcare worker accounts.", shape=box, style=rounded];
+    "/Section(features).has/Feature(superAdminDashboard)" ->   "/Section(features).has/Feature(superAdminDashboard).has/Gist(Enable Phystec AB to administrate healtcare worker accounts.)"[label=has];
 
 //singleSubnodeLink(Feature(issueAlert),has,Gist(Be able to issue alerts regarding patients through the admin dashboard.),Section(features).has/)
 
@@ -29,57 +72,96 @@ digraph "reqT.Model" {
     "/Section(features).has/Feature(issueAlert).has/Gist(Be able to issue alerts regarding patients through the admin dashboard.)" [label="Gist\nBe able to issue alerts regarding patients through the admin dashboard.", shape=box, style=rounded];
     "/Section(features).has/Feature(issueAlert)" ->   "/Section(features).has/Feature(issueAlert).has/Gist(Be able to issue alerts regarding patients through the admin dashboard.)"[label=has];
 
-//singleSubnodeLink(Feature(setUpProgram),has,Gist(Be able to set up a training program through the admin dashboard.),Section(features).has/)
+//singleSubnodeLink(Feature(patientDataSecurity),has,Gist(Handle patient data in a secure way.),Section(features).has/)
 
-    "/Section(features).has/Feature(setUpProgram)" [label="Feature\nsetUpProgram", shape=box];
-    "/Section(features).has/Feature(setUpProgram).has/Gist(Be able to set up a training program through the admin dashboard.)" [label="Gist\nBe able to set up a training program through the admin dashboard.", shape=box, style=rounded];
-    "/Section(features).has/Feature(setUpProgram)" ->   "/Section(features).has/Feature(setUpProgram).has/Gist(Be able to set up a training program through the admin dashboard.)"[label=has];
+    "/Section(features).has/Feature(patientDataSecurity)" [label="Feature\npatientDataSecurity", shape=box];
+    "/Section(features).has/Feature(patientDataSecurity).has/Gist(Handle patient data in a secure way.)" [label="Gist\nHandle patient data in a secure way.", shape=box, style=rounded];
+    "/Section(features).has/Feature(patientDataSecurity)" ->   "/Section(features).has/Feature(patientDataSecurity).has/Gist(Handle patient data in a secure way.)"[label=has];
   }
 
-//subGraphPre(Section(Pedatim Context),has,User(Patient),/)
+//subGraphPre(User(Patient),interactsWith,App(Android Client),/)
 
-  "/Section(Pedatim Context)" [label="Section\nPedatim Context", shape=box];
-  "/Section(Pedatim Context)" ->   "/Section(Pedatim Context).has/User(Patient)" [label=has, lhead="cluster_Section(Pedatim Context)"];
-  subgraph "cluster_Section(Pedatim Context)" { 
+  "/User(Patient)" [label="User\nPatient", shape=box];
+  "/User(Patient)" ->   "/User(Patient).interactsWith/App(Android Client)" [label=interactsWith, lhead="cluster_User(Patient)"];
+  subgraph "cluster_User(Patient)" { 
+    "/User(Patient).interactsWith/App(Android Client)" [label="App\nAndroid Client", shape=box];
 
-//singleSubnodeLink(User(Patient),interactsWith,App(Android Client),Section(Pedatim Context).has/)
+//subGraphPre(Section(Pedatim Context),has,App(Android Client),User(Patient).interactsWith/)
 
-    "/Section(Pedatim Context).has/User(Patient)" [label="User\nPatient", shape=box];
-    "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client)" [label="App\nAndroid Client", shape=box];
-    "/Section(Pedatim Context).has/User(Patient)" ->   "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client)"[label=interactsWith];
+    "/User(Patient).interactsWith/Section(Pedatim Context)" [label="Section\nPedatim Context", shape=box];
+    "/User(Patient).interactsWith/Section(Pedatim Context)" ->   "/User(Patient).interactsWith/Section(Pedatim Context).has/App(Android Client)" [label=has, lhead="cluster_Section(Pedatim Context)"];
+    subgraph "cluster_Section(Pedatim Context)" { 
 
-//singleSubnodeLink(App(Android Client),has,Component(mongo DB),Section(Pedatim Context).has/User(Patient).interactsWith/)
+//singleSubnodeLink(App(Android Client),has,Component(mongo DB),User(Patient).interactsWith/Section(Pedatim Context).has/)
 
-      "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client)" [label="App\nAndroid Client", shape=box];
-      "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client).has/Component(mongo DB)" [label="Component\nmongo DB", shape=box];
-      "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client)" ->   "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client).has/Component(mongo DB)"[label=has];
-        "/Section(Pedatim Context).has/User(Patient).interactsWith/App(Android Client).has/Component(mongo DB)" [label="Component\nmongo DB", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/App(Android Client)" [label="App\nAndroid Client", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/App(Android Client).has/Component(mongo DB)" [label="Component\nmongo DB", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/App(Android Client)" ->   "/User(Patient).interactsWith/Section(Pedatim Context).has/App(Android Client).has/Component(mongo DB)"[label=has];
 
-//singleSubnodeLink(User(Physical Therapist),interactsWith,Interface(admin dashboard),Section(Pedatim Context).has/)
+//subGraphPre(User(Healtcare Worker),interactsWith,System(admin dashboard),User(Patient).interactsWith/Section(Pedatim Context).has/)
 
-    "/Section(Pedatim Context).has/User(Physical Therapist)" [label="User\nPhysical Therapist", shape=box];
-    "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard)" [label="Interface\nadmin dashboard", shape=box];
-    "/Section(Pedatim Context).has/User(Physical Therapist)" ->   "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard)"[label=interactsWith];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Healtcare Worker)" [label="User\nHealtcare Worker", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Healtcare Worker)" ->   "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Healtcare Worker).interactsWith/System(admin dashboard)" [label=interactsWith, lhead="cluster_User(Healtcare Worker)"];
+      subgraph "cluster_User(Healtcare Worker)" { 
+        "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Healtcare Worker).interactsWith/System(admin dashboard)" [label="System\nadmin dashboard", shape=box];
+        "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Healtcare Worker).interactsWith/Component(mongo DB)" [label="Component\nmongo DB", shape=box];
+      }
 
-//singleSubnodeLink(Interface(admin dashboard),has,Component(mongo DB),Section(Pedatim Context).has/User(Physical Therapist).interactsWith/)
+//singleSubnodeLink(User(Phystec AB),interactsWith,System(admin dashboard),User(Patient).interactsWith/Section(Pedatim Context).has/)
 
-      "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard)" [label="Interface\nadmin dashboard", shape=box];
-      "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard).has/Component(mongo DB)" [label="Component\nmongo DB", shape=box];
-      "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard)" ->   "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard).has/Component(mongo DB)"[label=has];
-        "/Section(Pedatim Context).has/User(Physical Therapist).interactsWith/Interface(admin dashboard).has/Component(mongo DB)" [label="Component\nmongo DB", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Phystec AB)" [label="User\nPhystec AB", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Phystec AB).interactsWith/System(admin dashboard)" [label="System\nadmin dashboard", shape=box];
+      "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Phystec AB)" ->   "/User(Patient).interactsWith/Section(Pedatim Context).has/User(Phystec AB).interactsWith/System(admin dashboard)"[label=interactsWith];
+    }
+  }
 
-//singleSubnodeLink(User(Phystec AB),interactsWith,Interface(superadmin board),Section(Pedatim Context).has/)
+//subGraphPre(Section(weightedBenefits),has,Req(1),/)
 
-    "/Section(Pedatim Context).has/User(Phystec AB)" [label="User\nPhystec AB", shape=box];
-    "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board)" [label="Interface\nsuperadmin board", shape=box];
-    "/Section(Pedatim Context).has/User(Phystec AB)" ->   "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board)"[label=interactsWith];
+  "/Section(weightedBenefits)" [label="Section\nweightedBenefits", shape=box];
+  "/Section(weightedBenefits)" ->   "/Section(weightedBenefits).has/Req(1)" [label=has, lhead="cluster_Section(weightedBenefits)"];
+  subgraph "cluster_Section(weightedBenefits)" { 
 
-//singleSubnodeLink(Interface(superadmin board),has,Interface(admin dashboard),Section(Pedatim Context).has/User(Phystec AB).interactsWith/)
+//singleSubnodeLink(Req(1),has,Benefit(21),Section(weightedBenefits).has/)
 
-      "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board)" [label="Interface\nsuperadmin board", shape=box];
-      "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board).has/Interface(admin dashboard)" [label="Interface\nadmin dashboard", shape=box];
-      "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board)" ->   "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board).has/Interface(admin dashboard)"[label=has];
-        "/Section(Pedatim Context).has/User(Phystec AB).interactsWith/Interface(superadmin board).has/Interface(admin dashboard)" [label="Interface\nadmin dashboard", shape=box];
+    "/Section(weightedBenefits).has/Req(1)" [label="Req\n1", shape=box];
+    "/Section(weightedBenefits).has/Req(1).has/Benefit(21)" [label="Benefit\n21", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(1)" ->   "/Section(weightedBenefits).has/Req(1).has/Benefit(21)"[label=has];
+
+//singleSubnodeLink(Req(2),has,Benefit(24),Section(weightedBenefits).has/)
+
+    "/Section(weightedBenefits).has/Req(2)" [label="Req\n2", shape=box];
+    "/Section(weightedBenefits).has/Req(2).has/Benefit(24)" [label="Benefit\n24", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(2)" ->   "/Section(weightedBenefits).has/Req(2).has/Benefit(24)"[label=has];
+
+//singleSubnodeLink(Req(3),has,Benefit(5),Section(weightedBenefits).has/)
+
+    "/Section(weightedBenefits).has/Req(3)" [label="Req\n3", shape=box];
+    "/Section(weightedBenefits).has/Req(3).has/Benefit(5)" [label="Benefit\n5", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(3)" ->   "/Section(weightedBenefits).has/Req(3).has/Benefit(5)"[label=has];
+
+//singleSubnodeLink(Req(4),has,Benefit(17),Section(weightedBenefits).has/)
+
+    "/Section(weightedBenefits).has/Req(4)" [label="Req\n4", shape=box];
+    "/Section(weightedBenefits).has/Req(4).has/Benefit(17)" [label="Benefit\n17", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(4)" ->   "/Section(weightedBenefits).has/Req(4).has/Benefit(17)"[label=has];
+
+//singleSubnodeLink(Req(5),has,Benefit(9),Section(weightedBenefits).has/)
+
+    "/Section(weightedBenefits).has/Req(5)" [label="Req\n5", shape=box];
+    "/Section(weightedBenefits).has/Req(5).has/Benefit(9)" [label="Benefit\n9", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(5)" ->   "/Section(weightedBenefits).has/Req(5).has/Benefit(9)"[label=has];
+
+//singleSubnodeLink(Req(6),has,Benefit(19),Section(weightedBenefits).has/)
+
+    "/Section(weightedBenefits).has/Req(6)" [label="Req\n6", shape=box];
+    "/Section(weightedBenefits).has/Req(6).has/Benefit(19)" [label="Benefit\n19", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(6)" ->   "/Section(weightedBenefits).has/Req(6).has/Benefit(19)"[label=has];
+
+//singleSubnodeLink(Req(7),has,Benefit(6),Section(weightedBenefits).has/)
+
+    "/Section(weightedBenefits).has/Req(7)" [label="Req\n7", shape=box];
+    "/Section(weightedBenefits).has/Req(7).has/Benefit(6)" [label="Benefit\n6", shape=box, style=rounded];
+    "/Section(weightedBenefits).has/Req(7)" ->   "/Section(weightedBenefits).has/Req(7).has/Benefit(6)"[label=has];
   }
 
 }
