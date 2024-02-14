@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg width="800.0" height="300" font-family="sans-serif">
+  <svg id="x_axis">
+    <path d="M100,100 L700.0,100" style="stroke:gray;stroke-width:5"/>
+  </svg>
+  <svg id="breakpoint_Utility">
+    <path 
+    d="M700.0,100 L650.0,30 L750.0,30 Z" style="fill:orangered;stroke:gray;stroke-width:5;fill-opacity:0.8;opacity:0.8;">
+</path>
+    <circle cx="700.0" cy="100" r="7"/>
+    <text x="700.0" y="120" transform="rotate(90 695.0,122)">5000 Utility</text>
+  </svg>
+  <svg id="breakpoint_Differentiation">
+    <path 
+    d="M205.15463917525773,100 L155.15463917525773,30 L255.15463917525773,30 Z" style="fill:lime;stroke:gray;stroke-width:5;fill-opacity:0.8;opacity:0.8;">
+</path>
+    <circle cx="205.15463917525773" cy="100" r="7"/>
+    <text 
+    x="205.15463917525773" y="120" transform="rotate(90 200.15463917525773,122)">
+      1000 Differentiation
+</text>
+  </svg>
+  <svg id="breakpoint_Saturation">
+    <path 
+    d="M100.0,100 L50.0,30 L150.0,30 Z" style="fill:dodgerblue;stroke:gray;stroke-width:5;fill-opacity:0.8;opacity:0.8;">
+</path>
+    <circle cx="100.0" cy="100" r="7"/>
+    <text x="100.0" y="120" transform="rotate(90 95.0,122)">150 Saturation</text>
+  </svg>
+  <svg id="barrier_first">
+    <path 
+    d="M301.49484536082474,100 L301.49484536082474,10 L331.49484536082474,10 L331.49484536082474,100 Z" style="fill:rgb(255,220,0);stroke:gray;stroke-width:5;fill-opacity:0.8;opacity:0.8;">
+</path>
+    <text x="306.49484536082474" y="120">1900 Barrier first</text>
+  </svg>
+  <svg id="barrier_second">
+    <path 
+    d="M140.6701030927835,100 L140.6701030927835,10 L170.6701030927835,10 L170.6701030927835,100 Z" style="fill:rgb(255,220,0);stroke:gray;stroke-width:5;fill-opacity:0.8;opacity:0.8;">
+</path>
+    <text x="145.6701030927835" y="120">600 Barrier second</text>
+  </svg>
+  <svg id="Target_basic">
+    <circle 
+    cx="328.8659793814433" cy="100" r="10" style="stroke:red;fill:red;fill-opacity:0.8;opacity:0.8;">
+</circle>
+    <text 
+    x="328.8659793814433" y="120" transform="rotate(-30.0 268.8659793814433,100)" font-weight="bold">
+      2000 Target basic
+</text>
+  </svg>
+  <svg id="Target_strech">
+    <circle 
+    cx="143.29896907216494" cy="100" r="10" style="stroke:red;fill:red;fill-opacity:0.8;opacity:0.8;">
+</circle>
+    <text 
+    x="143.29896907216494" y="120" transform="rotate(-30.0 83.29896907216494,100)" font-weight="bold">
+      500 Target strech
+</text>
+  </svg>
+  <svg id="Ref_competitorX">
+    <circle 
+    cx="341.2371134020618" cy="100" r="10" style="stroke:rgb(80,45,185);fill:rgb(80,45,185);fill-opacity:0.8;opacity:0.8;">
+</circle>
+    <text 
+    x="341.2371134020618" y="120" transform="rotate(-20.0 281.2371134020618,100)" font-weight="bold">
+      2100 Ref competitorX
+</text>
+  </svg>
+  <svg id="Ref_competitorY">
+    <circle 
+    cx="452.5773195876289" cy="100" r="10" style="stroke:rgb(80,45,185);fill:rgb(80,45,185);fill-opacity:0.8;opacity:0.8;">
+</circle>
+    <text 
+    x="452.5773195876289" y="120" transform="rotate(-20.0 392.5773195876289,100)" font-weight="bold">
+      3000 Ref competitorY
+</text>
+  </svg>
+</svg>
+</svg>
